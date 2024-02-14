@@ -1,0 +1,13 @@
+<div>
+    <label for="csvFile">Seleccionar archivo CSV:</label>
+    <input type="file" id="csvFile" (change)="onFileSelected($event)" title="Seleccionar archivo CSV">
+    <button (click)="analyzeCsv()">Analizar CSV</button>
+  
+    <div *ngIf="analysisResult">
+      <h3>Resultados del Análisis:</h3>
+      <p>Estado con mayor acumulado: {{ maxState }}</p>
+      <p>Estado con menor acumulado: {{ minState }}</p>
+      <p>Estado más afectado: {{ mostAffectedState }}</p>
+    </div>
+  </div>
+  
